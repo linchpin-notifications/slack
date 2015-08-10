@@ -1,0 +1,3 @@
+# slack
+
+LinchPin Slack notifications

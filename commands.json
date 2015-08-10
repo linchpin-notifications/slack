@@ -1,0 +1,51 @@
+{
+  "webhook":{
+    "title":"Send a Message to an Slack Webhook. You can create one here: https://api.slack.com/incoming-webhooks",
+    "description":"Posts a message to an Slack Webhook",
+    "properties":{
+      "slack_webhook": {
+        "$ref":"#/definitions/slack_webhook"
+      },
+      "text":{
+        "type":"string"
+      },
+      "channel":{
+        "type": "string"
+      },
+      "username":{
+        "type":"string"
+      },
+      "icon_emoji":{
+        "type":"string"
+      },
+      "unfurl_links":{
+        "type":"boolean"
+      }
+    },
+    "required":[
+      "slack_webhook","text"
+    ],
+    "additionalProperties": false
+  },
+  ".definitions":{
+    "slack_webhook": {
+      "type": "object",
+      "title": "Slack Webhook Definition",
+      "description": "An Slack incoming webhook",
+      ".linchpin": "Notifications/slack_webhook",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "uri":{
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "uri"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
