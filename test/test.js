@@ -9,11 +9,9 @@ describe('slack',function(){
         it('should send a message using an slack webhook',function(done){
             this.timeout(3000);
             var req =  {lpn:'slack', cmd:'webhook', config:{
-                slack:{
                     slack_webhook:{name:"Test Webhook",uri:"https://hooks.slack.com/services/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"},
                     text:"this is a test notification!",
                     username:'jico'
-                }
             }};
 
             seneca.act(req, function(err,result){

@@ -29,13 +29,13 @@ module.exports = function(options) {
 
 
     function webhook(args, done){
-        webhookUri = args.config.slack.slack_webhook.uri;
+        webhookUri = args.config.slack_webhook.uri;
 
         slack = new Slack();
         slack.setWebhook(webhookUri);
 
 
-        var msg = _.extend({}, _.omit(args.config.slack,'slack_webhook'));
+        var msg = _.extend({}, _.omit(args.config,'slack_webhook'));
 
         slack.webhook(msg, function(err, response) {
             if(err){
