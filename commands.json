@@ -7,19 +7,24 @@
         "$ref":"#/definitions/slack_webhook"
       },
       "text":{
-        "type":"string"
+        "type":"string",
+        "title":"Text message"
       },
       "channel":{
-        "type": "string"
+        "type": "string",
+        "title":"Channel"
       },
       "username":{
-        "type":"string"
+        "type":"string",
+        "title":"Username"
       },
       "icon_emoji":{
-        "type":"string"
+        "type":"string",
+        "title":"Icon Emoji"
       },
       "unfurl_links":{
-        "type":"boolean"
+        "type":"boolean",
+        "title":"Unfurl Links"
       }
     },
     "required":[
@@ -35,10 +40,12 @@
       ".linchpin": "Notifications/slack_webhook",
       "properties": {
         "name": {
-          "type": "string"
+          "type": "string",
+          "title":"Name"
         },
         "uri":{
-          "type": "string"
+          "type": "string",
+          "title":"Slack Webhook"
         }
       },
       "required": [
