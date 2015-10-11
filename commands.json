@@ -28,7 +28,7 @@
       }
     },
     "required":[
-      "slack_webhook","text"
+      "webhook","text"
     ],
     "additionalProperties": false
   },
