@@ -1,5 +1,6 @@
 {
   "webhook":{
+    "type":"object",
     "title":"Send a Message to an Slack Webhook. You can create one here: https://api.slack.com/incoming-webhooks",
     "description":"Posts a message to an Slack Webhook",
     "properties":{
