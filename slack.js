@@ -29,7 +29,7 @@ module.exports = function(options) {
 
 
     function webhook(args, done){
-        webhookUri = args.config.slack_webhook.uri;
+        webhookUri = args.config.webhook.uri;
 
         slack = new Slack();
         slack.setWebhook(webhookUri);
