@@ -1,39 +1,47 @@
 {
-  "webhook":{
-    "type":"object",
-    "title":"Send a Message to an Slack Webhook. You can create one here: https://api.slack.com/incoming-webhooks",
-    "description":"Posts a message to an Slack Webhook",
-    "properties":{
-      "webhook": {
-        "$ref":"#/definitions/webhook"
-      },
-      "text":{
-        "type":"string",
-        "title":"Text message"
-      },
-      "channel":{
-        "type": "string",
-        "title":"Channel"
-      },
-      "username":{
-        "type":"string",
-        "title":"Username"
-      },
-      "icon_emoji":{
-        "type":"string",
-        "title":"Icon Emoji"
-      },
-      "unfurl_links":{
-        "type":"boolean",
-        "title":"Unfurl Links"
+  "webhook": {
+    "type": "object",
+    "title": "Send a Message to an Slack Webhook. You can create one here: https://api.slack.com/incoming-webhooks",
+    "description": "Posts a message to an Slack Webhook",
+    ".options": {
+      "fields": {
+        "unfurl_links": {
+          "rightLabel": "Unfurl?"
+        }
       }
     },
-    "required":[
-      "webhook","text"
+    "properties": {
+      "webhook": {
+        "$ref": "#/definitions/webhook"
+      },
+      "text": {
+        "type": "string",
+        "title": "Text message"
+      },
+      "channel": {
+        "type": "string",
+        "title": "Channel"
+      },
+      "username": {
+        "type": "string",
+        "title": "Username"
+      },
+      "icon_emoji": {
+        "type": "string",
+        "title": "Icon Emoji"
+      },
+      "unfurl_links": {
+        "type": "boolean",
+        "title": "Unfurl Links"
+      }
+    },
+    "required": [
+      "webhook",
+      "text"
     ],
     "additionalProperties": false
   },
-  ".definitions":{
+  ".definitions": {
     "webhook": {
       "type": "object",
       "title": "Slack Webhook Definition",
@@ -42,11 +50,11 @@
       "properties": {
         "name": {
           "type": "string",
-          "title":"Name"
+          "title": "Name"
         },
-        "uri":{
+        "uri": {
           "type": "string",
-          "title":"Slack Webhook"
+          "title": "Slack Webhook"
         }
       },
       "required": [
